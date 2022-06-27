@@ -1,0 +1,20 @@
+<div class="Main-inputXSL-container">
+    <p class="main-label">Input XSL</p>
+    <textarea class="inputxsl" id="inputxsl" name="inputxsl" rows="20" cols="50"><%-inputXSL %></textarea>
+    <script>
+        
+        var inputXSLEditor=CodeMirror.fromTextArea(
+            document.getElementById('inputxsl'),{
+                mode:"xml",
+                theme:"dracula",
+                lineNumbers:true,
+                
+            }
+            
+        )
+        
+        inputXSLEditor.setSize(editorWidth, editorHeigth);
+       
+
+    </script>
+</div>

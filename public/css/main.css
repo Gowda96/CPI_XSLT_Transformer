@@ -1,0 +1,40 @@
+
+.main-label{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.main-parameter-holder{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.form-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2px;
+    justify-content: center;
+    ;
+}
+
+
+.param-value,.param-key,.remove-btn{
+    margin:5px;
+    width:100px;
+}
+.param-key-value{
+    margin:5px;
+    display:flex;
+    flex-direction:row ;
+}
+
+.cm-s-dracula.CodeMirror{
+    margin: 15px;
+    margin-bottom: 35px;
+    padding: 5px;
+    
+
+}

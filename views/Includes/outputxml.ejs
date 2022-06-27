@@ -1,0 +1,19 @@
+<div class="Main-outputXML-container">
+    <p class="main-label">Output XML</p>
+    <textarea class="outputxml" id="outputxml" name="outputxml" rows="20" cols="50"><%-outputXML %></textarea>
+    <script>
+        
+        var outputXMLEditor=CodeMirror.fromTextArea(
+            document.getElementById('outputxml'),{
+                mode:"xml",
+                theme:"dracula",
+                lineNumbers:true,
+                
+            }
+            
+        )
+       
+        outputXMLEditor.setSize(editorWidth, editorHeigth);
+
+    </script>
+</div>

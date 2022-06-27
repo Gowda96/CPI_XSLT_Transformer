@@ -1,0 +1,35 @@
+<div class="Main-inputXML-container" >
+    <p class="main-label">Input XML</p>
+    <textarea class="inputxml"id="inputxml" name="inputxml" rows="20" cols="50" ><%-inputXML %></textarea>
+    <script>
+        var inputXMLEditor=CodeMirror.fromTextArea(
+            document.getElementById('inputxml'),{
+                mode:"xml",
+                theme:"dracula",
+                lineNumbers:true
+            }
+        )     
+             
+        inputXMLEditor.setSize(editorWidth, editorHeigth);
+     </script>
+    <script src="/js/parameter.js"></script>
+    
+        
+  
+    <div class="main-parameter-holder">
+        <div clas="add-parameter" id="add-parameter">
+            <button type="button" onclick="addParameter()"> Add Parameters</button>
+        </div>
+        <div class="parameter-key-value" id="parameter-key-value"> 
+            <% if(userParameters){
+               for(let i=0;i < userParameters.length;i=i+2){%>
+                <div id="parameter-key-value-<%= i%>"  class="param-key-value">
+                    <input type="text" class="param-key" placeholder="name" id="parameter_key_<%= i%>" name="parameter_key_<%= i%>" value="<%= userParameters[i]%>"/>
+                    <input type="text" class="param-value" placeholder="value" id="parameter_value_<%= i%>" name="parameter_value_<%= i%>" value="<%= userParameters[i+1]%>"/>
+                    <button type="button" class="remove-btn" id="removeBtn_<%= i%>" onclick="removeParameter('<%= i%>')">Remove</button>
+                </div>
+               
+            <%} } %>
+        </div>
+    </div>
+</div>
